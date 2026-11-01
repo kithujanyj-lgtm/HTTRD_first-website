@@ -1,0 +1,337 @@
+/* ============================
+     SETTINGS PAGE STYLE
+============================ */
+.settings-section {
+  width: 80%;
+  margin: 60px auto;
+  background: rgba(0,0,20,0.5);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 25px #00eaff;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.4);
+  padding: 15px 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 1px solid #024b70;
+  color: #d9f5ff;
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+.setting-row i {
+  color: #00eaff;
+  margin-right: 10px;
+  text-shadow: 0 0 8px #00eaff;
+}
+
+/* SWITCH TOGGLE */
+.switch {
+  position: relative;
+  width: 55px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #555;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #00eaff;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* BUTTONS */
+.button-row {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 22px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: .3s;
+  color: white;
+}
+
+.save {
+  background: #005eff;
+  box-shadow: 0 0 10px #0040ff;
+}
+
+.reset {
+  background: #ff2f2f;
+  box-shadow: 0 0 10px #800000;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+/* -------------------------------------------------------
+   LOADING SCREEN
+------------------------------------------------------- */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeOut 2s ease 3s forwards; /* 3s wait, 2s fade */
+}
+
+.loading-gif {
+    width: 200px;
+    height: auto;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+
+/* -------------------------------------------------------
+   BASIC BODY STYLE
+------------------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("wp2760840.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+hr {
+    border: 1px solid rgb(238,67,67);
+    margin: 0;
+}
+
+h2,
+p {
+    margin: 10px;
+}
+
+/* -------------------------------------------------------
+   NAVIGATION BAR
+------------------------------------------------------- */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    display: block;
+    color: rgb(238, 67, 67);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    background-color: #c92c2c;
+    color: black;
+}
+
+/* -------------------------------------------------------
+   SCROLLING IMAGE STRIP
+------------------------------------------------------- */
+.scroll-container {
+    width: 900px;
+    height: 180px;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #000 20%, #030b1e 100%);
+    border-radius: 15px;
+    white-space: nowrap;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 0 25px #0ff;
+    border: 2px solid #0ff;
+}
+
+.scroll-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 25s linear infinite;
+}
+
+.scroll-content img {
+    height: 160px;
+    padding: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 15px #0ff);
+    transition: 0.3s;
+}
+
+.scroll-content img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 30px #4cc9ff);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* -------------------------------------------------------
+   BIO SECTION
+------------------------------------------------------- */
+.image-and-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bio-text {
+    color: #a8e7ff;
+    max-width: 450px;
+    background: rgba(0, 0, 20, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #0ff;
+    box-shadow: 0 0 20px #0ff inset;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.bio-text h2 {
+    color: #4cc9ff;
+    text-shadow: 0 0 10px #0ff;
+}
+
+.bio-text p {
+    line-height: 1.5;
+    text-shadow: 0 0 5px #0ff;
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 1000px) {
+    .scroll-container {
+        width: 90%;
+    }
+    .bio-text {
+        max-width: 80%;
+    }
+}
+
+/* -------------------------------------------------------
+   ABILITIES SECTION
+------------------------------------------------------- */
+.abilities-section {
+    width: 85%;
+    margin: auto;
+    padding: 40px 0;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #79aaff;
+    margin-bottom: 40px;
+    text-shadow: 0 0 12px #003cff;
+}
+
+/* Ability Card */
+.ability-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid #122337;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 35px;
+    backdrop-filter: blur(4px);
+    transition: 0.35s ease;
+}
+
+/* Alternate layout */
+.ability-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Hover effect */
+.ability-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px #2f4cff;
+    border-color: #2f4cff;
+}
+
+/* Ability Images */
+.ability-img {
+    width: 240px;
+    height: auto;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 0 15px #000;
+}
+
+/* Text inside card */
+.ability-text h3 {
+    font-size: 1.8rem;
+    color: #8db6ff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #1d3dff;
+}
+
+.ability-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d6e2ff;
+}
+/*testing */

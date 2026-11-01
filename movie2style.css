@@ -1,0 +1,297 @@
+/* -------------------------------------------------------
+   LOADING SCREEN
+------------------------------------------------------- */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeOut 2s ease 3s forwards; /* 3s wait, 2s fade */
+}
+
+.loading-gif {
+    width: 200px;
+    height: auto;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+/* -------------------------------------------------------
+   NAVIGATION BAR
+------------------------------------------------------- */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    display: block;
+    color: rgb(238, 67, 67);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    background-color: #c92c2c;
+    color: black;
+}
+
+nav ul li a i {
+    margin-right: 6px;          
+    color: rgb(238, 67, 67);    
+    transition: 0.3s;
+}
+
+/* Glow + color change on hover */
+nav ul li a:hover i {
+    color: black;
+    text-shadow: 0 0 8px #ff2424;
+}
+hr {
+    border: 1px solid rgb(238,67,67);
+    margin: 0;
+}
+/* -------------------------------------------------------
+   BACKGROUND -----------------------------------------------
+------------------------------------------------------- */
+body {
+    background: radial-gradient(circle at center, #00111c, #000);
+}
+/* -------------------------------------------------------
+  go back -----------------------------------------------
+------------------------------------------------------- */
+/* remove underline */
+.nightfury-link {
+  text-decoration: none;
+}
+
+/* MAIN BUTTON */
+.nightfury-btn {
+  position: relative;
+  padding: 14px 40px;
+  background: #0a0b0d;      /* Toothless black */
+  font-size: 18px;
+  font-weight: 600;
+  color: #5ad8ff;           /* Blue glow (Night Fury plasma) */
+  border: 3px solid #5ad8ff;
+  border-radius: 10px;
+  cursor: pointer;
+
+  box-shadow: 0 0 10px #5ad8ff55;
+  transition: all 0.35s ease-in-out;
+  overflow: hidden;
+
+  /* soft pulsing glow */
+  animation: nightPulse 3s ease-in-out infinite;
+}
+
+/* Glow pulse animation */
+@keyframes nightPulse {
+  0% { box-shadow: 0 0 8px #5ad8ff55; }
+  50% { box-shadow: 0 0 20px #5ad8ff99; }
+  100% { box-shadow: 0 0 8px #5ad8ff55; }
+}
+
+/* ===== SURPRISE PARTICLES ===== */
+
+/* Wing-shaped glowing particles */
+.wing {
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  background: #5ad8ff;
+  border-radius: 20px 20px 2px 2px;
+  opacity: 0.6;
+  transform: rotate(-25deg);
+  filter: blur(2px);
+  transition: 0.8s ease;
+}
+
+.wing-1 { top: 20%; left: 15%; }
+.wing-2 { top: 60%; left: 70%; transform: rotate(35deg); }
+
+/* Plasma spark particles */
+.spark {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #73f2ff;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 5px #73f2ff);
+  transition: 0.8s ease;
+}
+
+.spark-1 { top: 40%; left: 30%; }
+.spark-2 { top: 25%; left: 55%; }
+.spark-3 { top: 70%; left: 45%; }
+
+/* ===== HOVER EFFECT ===== */
+.nightfury-btn:hover {
+  background: transparent;
+  color: #73f2ff;
+  box-shadow: 0 0 30px #73f2ffcc, 0 0 60px #73f2ff66;
+}
+
+/* Wings fly outward */
+.nightfury-btn:hover .wing-1 {
+  top: -40%;
+  left: -20%;
+  opacity: 1;
+  transform: rotate(-50deg) scale(1.2);
+  filter: drop-shadow(0 0 10px #73f2ff);
+}
+
+.nightfury-btn:hover .wing-2 {
+  top: 90%;
+  left: 120%;
+  opacity: 1;
+  transform: rotate(60deg) scale(1.2);
+  filter: drop-shadow(0 0 10px #73f2ff);
+}
+
+/* Sparks explode outward */
+.nightfury-btn:hover .spark-1 {
+  top: -20%;
+  left: 10%;
+  transform: scale(1.5);
+}
+
+.nightfury-btn:hover .spark-2 {
+  top: 10%;
+  left: 100%;
+  transform: scale(1.5);
+}
+
+.nightfury-btn:hover .spark-3 {
+  top: 120%;
+  left: 40%;
+  transform: scale(1.5);
+}
+/* -------------------------------------------------------
+  random line -----------------------------------------------
+------------------------------------------------------- */
+.spark-divider {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #8be0ff, transparent);
+  margin: 30px 0;
+}
+/* -------------------------------------------------------
+  the actual stuff -----------------------------------------------
+------------------------------------------------------- */
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #79aaff;
+    margin-bottom: 40px;
+    text-shadow: 0 0 12px #003cff;
+}
+.abilities-section {
+    width: 85%;
+    margin: auto;
+    padding: 40px 0;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.ability-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid #122337;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 35px;
+    backdrop-filter: blur(4px);
+    transition: 0.35s ease;
+}
+.ability-img {
+    width: 240px;
+    height: auto;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 0 15px #000;
+}
+.ability-text h3 {
+    font-size: 1.8rem;
+    color: #8db6ff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #1d3dff;
+}
+
+.ability-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d6e2ff;
+}
+/* -------------------------------------------------------
+ revew box ---------------------------------------------
+------------------------------------------------------- */
+.review-card {
+    position: relative;
+    background-color: #30344c;
+    padding: 1em;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 25px auto;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.35);
+    transition: 200ms ease-in-out;
+    color: #c0c3d7;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.review-score {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #C6E1ED;
+}
+
+.review-body {
+    margin-top: 8px;
+    line-height: 1.55;
+    white-space: pre-line;
+}
+
+.review-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #9fa4aa;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.review-helpful {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.review-helpful svg {
+    width: 18px;
+    height: 18px;
+    stroke: #9fa4aa;
+}
+
+.review-helpful span {
+    font-weight: bold;
+}

@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>TOOTHLESS</title>
+
+    <link rel="icon" type="image/png" href="httyd-toothless-tail-512x512.png">
+    <link href="movie1style.css" rel="stylesheet" type="text/css">
+      <!-- Font Awesome (FREE version, works instantly) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loading-screen">
+    <img src="rr0iu8kv3z331.gif" alt="Loading..." class="loading-gif">
+</div>
+
+<!-- Navigation Menu -->
+<nav>
+    <ul>
+        <li><a href="css coding website.html">Home</a></li>
+        <hr>
+        <li><a href="bigraphy.html"></i> Biography</a></li>
+        <hr>
+        <li><a href="Review.html"><i class="fa-solid fa-star"></i>Review</a></li>
+        <hr>
+        <!-- Biography with Dragon Icon -->
+        <li><a href="songs.html"></i>songs</a></li>
+        <hr>
+        <li><a href="#about">Vacation Page</a></li>
+    </ul>
+</nav>
+<!-- random line -->
+<div class="spark-divider"></div>
+<!-- movie box-->

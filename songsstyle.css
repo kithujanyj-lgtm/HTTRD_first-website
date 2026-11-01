@@ -1,0 +1,237 @@
+/* -------------------------------------------------------
+   LOADING SCREEN
+------------------------------------------------------- */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeOut 2s ease 3s forwards; /* 3s wait, 2s fade */
+}
+
+.loading-gif {
+    width: 200px;
+    height: auto;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+/* -------------------------------------------------------
+   NAVIGATION BAR
+------------------------------------------------------- */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    display: block;
+    color: rgb(238, 67, 67);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    background-color: #c92c2c;
+    color: black;
+}
+
+nav ul li a i {
+    margin-right: 6px;          
+    color: rgb(238, 67, 67);    
+    transition: 0.3s;
+}
+
+/* Glow + color change on hover */
+nav ul li a:hover i {
+    color: black;
+    text-shadow: 0 0 8px #ff2424;
+}
+/* -------------------------------------------------------
+   BACKGROUND -----------------------------------------------
+------------------------------------------------------- */
+
+body {
+  background: repeating-linear-gradient(
+    135deg,
+    #0b0f12,
+    #0b0f12 10px,
+    #141a1f 10px,
+    #141a1f 20px
+  );
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+hr {
+    border: 1px solid rgb(238,67,67);
+    margin: 0;
+}
+
+h2,
+p {
+    margin: 10px;
+}
+/* -------------------------------------------------------
+  title style
+------------------------------------------------------- */
+.title {
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 60px;
+    color: rgb(191, 35, 35);
+    text-align: center;
+    text-shadow: 5px 5px 5px #000000;
+    margin-top: 70px; /* optional spacing */
+}
+
+/* -------------------------------------------------------
+  end of title style
+  
+------------------------------------------------------- */
+
+/* -------------------------------------------------------
+ Song List Section
+
+------------------------------------------------------- */
+.spark-divider {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #8be0ff, transparent);
+  margin: 30px 0;
+}
+
+.combat-section {
+    background: radial-gradient(circle at center, #150000 20%, #000 100%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(255,0,0,0.3);
+}
+
+/* frame around the video */
+.toothless-frame {
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #8b0000, #000000);
+    box-shadow: 
+        0 0 20px rgba(255,0,0,0.5),
+        inset 0 0 25px rgba(0,0,0,0.8);
+    margin-bottom: 35px;
+    animation: pulseGlow 3s infinite alternate;
+}
+
+/* Glowing thing */
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 15px rgba(25, 0, 255, 0.4), inset 0 0 20px black; }
+    100% { box-shadow: 0 0 35px rgba(0, 81, 255, 0.9), inset 0 0 40px black; }
+}
+
+.lyrics-box {
+    margin-top: 40px;
+    padding: 25px;
+    background: rgba(0,0,0,0.55);
+    border: 2px solid rgba(49, 139, 255, 0.37);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 132, 255, 0.35);
+    backdrop-filter: blur(6px);
+}
+
+/* --- LYRIC LINE BASE STYLE (unchanged) --- */
+.lyric-line {
+    color: #2a7fff;
+    font-size: 22px;
+    font-family: "Trebuchet MS", sans-serif;
+    letter-spacing: 1.5px;
+    margin: 12px 0;
+    opacity: 0;
+    text-shadow:
+        0 0 12px rgba(24, 104, 196, 0.8),
+        0 0 22px rgba(0,0,0,0.8);
+
+    animation: fadeSlide 2.2s forwards;
+
+    /* Needed for shimmer */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fade-in animation */
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+        filter: blur(4px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* TIMING DELAYS (unchanged) */
+.lyric-line:nth-child(1) { animation-delay: 0.2s; }
+.lyric-line:nth-child(2) { animation-delay: 0.4s; }
+.lyric-line:nth-child(3) { animation-delay: 0.6s; }
+.lyric-line:nth-child(4) { animation-delay: 0.8s; }
+
+.lyric-line:nth-child(5) { animation-delay: 1.0s; }
+.lyric-line:nth-child(6) { animation-delay: 1.2s; }
+.lyric-line:nth-child(7) { animation-delay: 1.4s; }
+.lyric-line:nth-child(8) { animation-delay: 1.6s; }
+.lyric-line:nth-child(9) { animation-delay: 1.8s; }
+
+.lyric-line:nth-child(10) { animation-delay: 2.0s; }
+.lyric-line:nth-child(11) { animation-delay: 2.2s; }
+.lyric-line:nth-child(12) { animation-delay: 2.4s; }
+.lyric-line:nth-child(13) { animation-delay: 2.6s; }
+
+/* -------------------------------------------- */
+/*   skiny words  */
+/* -------------------------------------------- */
+
+.lyric-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255,255,255,0.65) 50%,
+        transparent 100%
+    );
+    opacity: 0; /* hidden until hover */
+    pointer-events: none;
+    transition: opacity 0.25s ease-out;
+}
+
+.lyric-line:hover::after {
+    opacity: 1;
+    animation: lyricShineSlow 3.8s ease-out forwards;
+}
+
+@keyframes lyricShineSlow {
+    0% { left: -150%; }
+    100% { left: 150%; }
+}

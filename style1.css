@@ -1,0 +1,133 @@
+      
+                                
+                                     /* LOADING SCREEN */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  /* Fade out automatically */
+  animation: fadeOut 2s ease 3s forwards; /* 3s wait, 2s fade */
+}
+
+.loading-gif {
+  width: 200px;
+  height: auto;
+}
+
+/* Keyframes for fading out */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+                                       
+.main-content {
+  text-align: center;
+  margin-top: 200px;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #111;
+  min-height: 100vh;
+}
+                             /* END OF LOADING SCREEN */
+                      /*background */         
+          
+          body {
+  background-image: url("toothlesss\ the\ homepage\ wall\ paper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+                           /* navagation bar */
+body {
+  margin: 0;
+  padding: 0;
+}
+hr {
+  border: 1px solid rgb(238, 67, 67);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h2, p {
+  margin: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: rgb(238, 67, 67);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #eb7979;
+}
+
+li a:hover {
+  background-color: #c92c2c;
+  color: rgb(0, 0, 0);
+}
+
+                                /* end of navagation bar */
+
+                               /* coconut font */
+  .title {
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 60px;
+    color: rgb(191, 35, 35);
+    text-align: center;
+    text-shadow: 5px 5px 5px #000000;
+    margin-top: 70px; /* optional spacing */
+    border: #000 10px solid;
+  }
+  /* end of title font */
+.coconut {
+  background-color: white;      
+  color: red;                  
+  width: 600px;                
+  border: 15px solid black;    
+  padding: 60px;              
+  margin: 40px 0 40px 40px;  
+  box-sizing: border-box;
+  font-family: "Lucida Handwriting", cursive;
+  font-size: 30px;
+  text-align: left;              /* Align text to the left */
+}
+@keyframes dragonFire { 
+  0% { background-color: #ffffff; }
+  50% { background-color: #ffcccc; }
+  100% { background-color: #ffffff; }
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.coconut {
+  animation: 
+    dragonFire 3s infinite,
+    floaty 3s ease-in-out infinite;
+}
+                                /* end of coconut box */       
+ 
+ 
